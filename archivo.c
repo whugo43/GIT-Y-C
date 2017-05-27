@@ -2,10 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX 26
-//prototipo de funciones.
 char * encriptar(char nuv_fra[MAX],int num);
-
-
 char *  encriptar(char cadena[MAX],int llave){
     int i=0;
     int dif;
@@ -31,26 +28,17 @@ char *  encriptar(char cadena[MAX],int llave){
 
 int main()
 {
-    //Variables necesarias
     int x;
     char cadena[MAX];
-    //Presentación
-   
     printf("        cifrado cíclico:\n");
     printf("-----------------------------\n");
     printf("introduce una cadena:     ");
-    //Un especificador que admite texto:
     scanf("%26[^\n]", cadena);
-    //Vacía el buffer del teclado
     while(getchar()!='\n');
-    //Pedimos el número
     printf("introduce un numero:      ");
     scanf("%d",&x);
-    //Vacía el buffer del teclado
     while(getchar()!='\n');
-    //Llamamos a la función encriptar
     printf("La frase encriptada es:   %s", encriptar(cadena, x));
-    getchar();
-    
+    getchar();   
     return 0;
 }
