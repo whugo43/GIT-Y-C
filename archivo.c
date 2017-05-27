@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX 26
-<<<<<<< HEAD
-=======
 //prototipo de funciones.
 
 void morse(char frase[MAX]);
@@ -92,8 +90,9 @@ if (frase[i] == 122){strcpy(letra,"— — · .");}//z
 }
 
 
->>>>>>> parte2
 char * encriptar(char nuv_fra[MAX],int num);
+
+
 char *  encriptar(char cadena[MAX],int llave){
     int i=0;
     int dif;
@@ -117,24 +116,35 @@ char *  encriptar(char cadena[MAX],int llave){
     return cadena;  
 }
 
+
+
+
 int main(int argc, char const *argv[])
 {
+    //Variables necesarias
     int x;
-<<<<<<< HEAD
+    //Presentación
+if (argc<=1){
     char cadena[MAX];
+    //Presentación
+   
     printf("        cifrado cíclico:\n");
     printf("-----------------------------\n");
     printf("introduce una cadena:     ");
+    //Un especificador que admite texto:
     scanf("%26[^\n]", cadena);
+    //Vacía el buffer del teclado
     while(getchar()!='\n');
+    //Pedimos el número
     printf("introduce un numero:      ");
     scanf("%d",&x);
+    //Vacía el buffer del teclado
     while(getchar()!='\n');
+    //Llamamos a la función encriptar
     printf("La frase encriptada es:   %s", encriptar(cadena, x));
-    getchar();   
-=======
-    //Presentación
-
+morse(cadena);
+    getchar();}
+else{
 char cadena[MAX]={0};
 char letra[MAX]={0};
 int numero=0;
@@ -142,10 +152,9 @@ strcpy(cadena,argv[2]);
 
 strcpy(letra,argv[1]);
 x = atoi(letra);
-    printf("La frase encriptado es:   %s", encriptar(cadena, x));
+    printf("La frase encriptada es:   %s", encriptar(cadena, x));
     morse(cadena);
     getchar();
     
->>>>>>> parte2
-    return 0;
-}
+    
+}return 0;}
